@@ -1,0 +1,9 @@
+.title {
+    color: white;
+    padding: 25px;
+    margin: 0;
+}
+
+.header {
+    background: linear-gradient(to right, #2E5790, #4B9762);
+}
