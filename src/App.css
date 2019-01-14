@@ -1,0 +1,22 @@
+.App {
+    height: 100%;
+    background-color: #F8FEFA;
+}
+
+.search-results {
+    height: 43vh;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.favourites {
+    background-color: #F8FEFA;
+}
+
+.favourites h1{
+    padding: 15px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    margin-top: 15px;
+    color: #478F5C;
+}

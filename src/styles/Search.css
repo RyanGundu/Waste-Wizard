@@ -1,12 +1,32 @@
 .search {
     padding: 20px;
+    padding-bottom: 5px;
+    background-color: white;
+    max-width: 100%;
+}
+
+.searchBar {
+    border: 0.5px solid #a0a0a0;
+    border-radius: 0 !important;
 }
 
 .searchBtn {
-    background-color: #4B9762;
+    background-color: #208a4a;
     border-radius: 0;
+    border: none;
+    margin: 0;
+}
+.searchBtn:hover {
+    transition: background-color 0.5s ease;
+    background-color: #2E5790;
+}
+
+.searchBtn:not(:hover) {
+    transition: background-color 0.5s ease;
+    background-color: #208a4a;
 }
 
 .icon {
     color: white;
+    font-size: 20px;
 }

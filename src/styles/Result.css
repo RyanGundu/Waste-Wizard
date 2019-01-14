@@ -1,3 +1,22 @@
 .result {
     max-width: 100%;
+    margin-bottom: 8px; 
+}
+
+.results {
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100%;
+}
+
+.star {
+    margin-right: 10px;
+}
+
+.heading {
+    font-size: 16px;
+}
+.description {
+    font-size: 15px;
 }
