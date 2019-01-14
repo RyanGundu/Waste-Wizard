@@ -45,7 +45,6 @@ class Search extends Component {
             if (filteredData.length === 0) this.setState({message: 'No Search Results.'});
             this.props.setData(filteredData);
         } catch (error) {
-            console.log(error);
             this.props.setData([]);
             this.setState({message: 'Oops, there seems to be a proplem. Please check your connection.'});
         } finally {
@@ -62,7 +61,7 @@ class Search extends Component {
             else obj.isChecked = false;
 
             for (let key of searchWords) {
-                if (obj.keywords.includes(key)) {
+                if (obj.keywords.includes(key.toLowerCase())) {
                     obj.id = obj.title //add unique id to each (title)
                     return true; // search value found
                 }
