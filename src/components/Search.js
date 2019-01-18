@@ -37,8 +37,7 @@ class Search extends Component {
 
     /* get request for data */
     async onSearch () {
-        this.setState({message: ''});
-        this.setState({isLoading: true});
+        this.setState({message: '', isLoading: true});
         try {
             let response = await axios.get('https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000')
             let filteredData = this.filterData(response.data);
@@ -55,8 +54,7 @@ class Search extends Component {
     /* returns filtered data based on search keywords */
     filterData = (data) => {
         return data.filter(obj => {
-            let searchWords = this.state.searchKey.split(/[ ,]+/);
-
+            let searchWords = this.state.searchKey.replace(",", "").split(" ");
             if (this.props.favouritesMap.has(obj.title)) obj.isChecked = true;
             else obj.isChecked = false;
 

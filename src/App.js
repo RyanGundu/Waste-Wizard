@@ -17,25 +17,16 @@ class App extends Component {
       favourites: [], //stores the starred data
       favouritesMap: new Set(), //used to check existing favourites on reload
     }
-
-    this.onStar = this.onStar.bind(this);
-    this.setData = this.setData.bind(this);
-    this.clearData = this.clearData.bind(this);
   }
-
 
   /* Sets data after filtering http get request */
-  setData (filteredData) {
-    this.setState({data: filteredData});
-  }
+  setData = (filteredData) => this.setState({data: filteredData})
 
   /* clears results view */
-  clearData() {
-    this.setState({data: []});
-  }
+  clearData = () => this.setState({data: []})
 
   /* When favoriting or unfavoriting */
-  onStar (id) {
+  onStar = (id) => {
     let index = this.getIndex(id, this.state.data);
     if (index === -1) {
       this.removeFavourite(id);
