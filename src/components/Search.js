@@ -59,7 +59,7 @@ class Search extends Component {
             else obj.isChecked = false;
 
             for (let key of searchWords) {
-                if (obj.keywords.includes(key.toLowerCase())) {
+                if (key.length > 0 && obj.keywords.includes(key.toLowerCase())) {
                     obj.id = obj.title //add unique id to each (title)
                     return true; // search value found
                 }
