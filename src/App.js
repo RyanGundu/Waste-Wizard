@@ -90,7 +90,6 @@ class App extends Component {
         <Header/>
         <Search setData={this.setData} clearData={this.clearData} favouritesMap={this.state.favouritesMap}/>
         <div className="search-results">
-          <h1 hidden={!this.state.noResults}>No Search Results.</h1>
           <Result data={this.state.data} onStar={this.onStar}/>
         </div>
         <div className="favourites">
